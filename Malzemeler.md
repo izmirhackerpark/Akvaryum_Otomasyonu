@@ -15,7 +15,7 @@
 * Bağlantı şeması 
   * ![Bağlantı şeması](http://www.prometec.net/wp-content/uploads/2014/12/Buena.jpg)
 
-#### Su seviye ölçümü için gerekli malzemeler
+#### Su seviye ölçümü için gerekli malzemeler:
 * [Su Seviyesi Ölçüm Şamandırası](http://www.aliexpress.com/item/1pc-Tank-Pool-Water-Level-Liquid-Sensor-Float-Switch-Brand-New/32473487800.html?spm=2114.01020208.3.1.KXnzHa&ws_ab_test=searchweb201556_1,searchweb201644_3_10001_10002_10005_10006_10003_10004_62,searchweb201560_6,searchweb1451318400_6149)
 * [Örnek kod parçacığı](/Kodlar/Samadira.ino)[Kaynakça](http://www.gammon.com.au/forum/?id=11955)
 * Bağlantı şeması
