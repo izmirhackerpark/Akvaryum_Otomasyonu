@@ -8,4 +8,8 @@ Projenin yapımında kullanılacak olan malzemelerin listesini ve örnek bağlan
 * [Su seviye ölçümü için gerekli malzemeler](https://github.com/sukelec/Akvaryum_Otomasyonu/blob/master/Malzemeler.md#su-seviye-%C3%B6l%C3%A7%C3%BCm%C3%BC-i%C3%A7in-gerekli-malzemeler)
 
 ## [Kodlar klasörü](/Kodlar)
-Arduino için kullanılacak parçaların arduino ile iletişimini sağlayacak kod parçacıklarınıo içerir.
+Arduino için kullanılacak parçaların arduino ile iletişimini sağlayacak kod parçacıklarını içerir.
+
+* [DS18S20.ino](/Kodlar/DS18S20.ino) - `Akvaryum sıcaklığını ölçecek aparat için örnek kod parçacığı`
+* [ESP8266.ino](/Kodlar/ESP8266.ino) - `Kablosuz bağlantı veri transferi örnek kod parçacığı`
+* [Samandira.ino](/Kodlar/Samandira.ino) - `Şamandıra ölçümü için gerekli örnek kod parçacığı`
