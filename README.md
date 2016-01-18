@@ -12,4 +12,5 @@ Arduino için kullanılacak parçaların arduino ile iletişimini sağlayacak ko
 
 * [DS18S20.ino](/Kodlar/DS18S20.ino) - `Akvaryum sıcaklığını ölçecek aparat için örnek kod parçacığı`
 * [ESP8266.ino](/Kodlar/ESP8266.ino) - `Kablosuz bağlantı veri transferi örnek kod parçacığı`
-* [Samandira.ino](/Kodlar/Samandira.ino) - `Şamandıra ölçümü için gerekli örnek kod parçacığı`
+* [Samandira.ino](/Kodlar/Samandira.ino) - `Şamandıra ölçümü için kullanılacak örnek kod parçacığı`
+
