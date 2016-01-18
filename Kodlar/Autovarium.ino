@@ -80,7 +80,7 @@ void loop()   /****** LOOP: RUNS CONSTANTLY ******/
     {
         int ch_id, packet_len;
         char *pb;
-        Serial3.readBytesUntil('\n', buffer, BUFFER_SIZE);    //Tampondaki verileri okuduk
+        Serial3.readBytesUntil('\n', buffer, BUFFER_SIZE);  // Buffer read
         if (strncmp(buffer, "+IPD,", 5) == 0)
         {
             sscanf(buffer + 5, "%d,%d", &ch_id, &packet_len);
@@ -150,29 +150,29 @@ void loop()   /****** LOOP: RUNS CONSTANTLY ******/
 /*-----( Wifi Module Fuctions )-----*/
 
 void homepage(int ch_id) {
-    String Header;        //Http header' ı oluşturduk
+    String Header;  // Building Http header
 
     Header =  "HTTP/1.1 200 OK\r\n";
     Header += "Content-Type: text/html\r\n";
     Header += "Connection: close\r\n";
     //Header += "Refresh: 5\r\n";
 
-    String Content;     //Sayfamızın içeriği
-    Content = "<center><h1>Hello World!</h1></center><hr><center><h2>Oğuzhan Başer</h2></center><hr>Led State: D";
+    String Content;  // Page Content
+    Content = "<center><h1>Hello World!</h1></center><hr><center><h2>Autovarium</h2></center><hr>Led State: D";
     Content += String(ledState);
-    Content += "<br><a href=\"/?led\"><input type=\"button\" value=\"Led Durum\"></a>";
+    Content += "<br><a href=\"/?led\"><input type=\"button\" value=\"Led State\"></a>";
 
     Header += "Content-Length: ";
     Header += (int)(Content.length());
     Header += "\r\n\r\n";
 
-    Serial3.print("AT+CIPSEND=");   //Sayfayı belirttiğimiz AT komutu CH_ID ve içerik uzunluğu
+    Serial3.print("AT+CIPSEND=");  // AT command and CH_ID content length
     Serial3.print(ch_id);
     Serial3.print(",");
     Serial3.println(Header.length() + Content.length());
     delay(10);
 
-    //içeriği gönderdik
+    // Sending Content
     if (Serial3.find(">")) {
         Serial3.print(Header);
         Serial3.print(Content);
@@ -188,11 +188,11 @@ void clearSerialBuffer(void) {
 
 String sendData(String command, const int timeout, boolean debug)
 {
-    String response = "";     //server' ın bize vereceği cevap
+    String response = "";  // Server response
 
-    Serial3.print(command); // server a gönderdiğimiz komut
+    Serial3.print(command);  // Command sent to Server
 
-    long int time = millis();     //timeout ın ilk değeri
+    long int time = millis();  // First value of the timer
 
     while ( (time + timeout) > millis())
     {
@@ -203,11 +203,11 @@ String sendData(String command, const int timeout, boolean debug)
             response += c;
         }
     }
-    if (debug)      //geribesleme istiyorsak görüntüledik
+    if (debug)      // Debug line
     {
         Serial.print(response);
     }
-    return response;    //cevabı geri döndürdük
+    return response;
 }
 
 void connectWiFi(String NetworkSSID, String NetworkPASS) {
